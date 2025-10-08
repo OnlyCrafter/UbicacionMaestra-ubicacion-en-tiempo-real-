@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Número de geovallas -->
+    <EditText
+        android:id="@+id/numGeofences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de geovallas"
+        android:inputType="number" />
+
+    <!-- Botón para agregar geovallas -->
+    <Button
+        android:id="@+id/btnAddGeofences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Geovallas" />
+
+    <!-- ScrollView para que los campos sean desplazables -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Contenedor para los campos dinámicos de geovallas -->
+        <LinearLayout
+            android:id="@+id/geofenceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Botón para guardar los datos -->
+    <Button
+        android:id="@+id/btnGuardarGeofences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Geovallas" />
+
+</LinearLayout>

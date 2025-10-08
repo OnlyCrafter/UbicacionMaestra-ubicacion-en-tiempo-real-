@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Firstapp.ui.auth.register.registerActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="CREACIÓN DE CUENTA"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold|normal"
+        android:background="@drawable/custom_background_button"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:hint="Email"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:background="@drawable/custom_background_edittext"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionDone"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:hint="Contraseña"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        android:background="@drawable/custom_background_edittext"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passEditText2"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Confirmar Contraseña"
+        app:layout_constraintTop_toBottomOf="@+id/passEditText"
+        android:background="@drawable/custom_background_edittext"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registrarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_background_button"
+        android:text="Crear Cuenta"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintTop_toBottomOf="@id/passEditText2" />
+
+    <ImageButton
+        android:id="@+id/showHidePassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mostrar/Ocultar Contraseña"
+        android:src="@drawable/ic_visibility_off"
+        app:layout_constraintBottom_toBottomOf="@+id/passEditText"
+        app:layout_constraintEnd_toEndOf="@+id/passEditText"
+        app:layout_constraintTop_toTopOf="@+id/passEditText" />
+
+    <ImageButton
+        android:id="@+id/showHidePassConfirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mostrar/Ocultar Contraseña"
+        android:src="@drawable/ic_visibility_off"
+        app:layout_constraintBottom_toBottomOf="@+id/passEditText2"
+        app:layout_constraintEnd_toEndOf="@+id/passEditText2"
+        app:layout_constraintTop_toTopOf="@+id/passEditText2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

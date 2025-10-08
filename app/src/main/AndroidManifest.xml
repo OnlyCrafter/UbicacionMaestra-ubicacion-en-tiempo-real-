@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="com.google.firebase.firestore.permission.READ" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UbicacionMaestra"
+        tools:targetApi="31">
+        <activity
+            android:name=".Firstapp.ui.auth.lostPassword.ResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Firstapp.ui.utilities.activitiesUseful.DetallesDelitosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.auth.register.registerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.auth.login.loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.welcome.welcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Firstapp.ui.utilities.activitiesUseful.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.preferences.preferenceUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.panic.panicBttonActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".Firstapp.ui.utilities.services.EarthquakeMonitoringService"
+            android:enabled="true"
+            android:foregroundServiceType="location"
+            tools:ignore="ForegroundServicePermission"
+            android:exported="true" />
+
+        <activity
+            android:name=".Firstapp.ui.consultGroup.ConsultGroupAcivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.profile.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.historicLocation.ViewLocationsActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".Firstapp.ui.utilities.services.UbicacionGuardarService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"
+            tools:ignore="ForegroundServicePermission" />
+
+        <receiver
+            android:name=".Firstapp.ui.utilities.broadcasts.GeofenceBroadcastReceiver"
+            android:exported="false" />
+
+        <activity
+            android:name=".Firstapp.ui.consult1To1.ConsultAppR"
+            android:exported="true" />
+        <activity
+            android:name=".Firstapp.ui.saveLocation.SaveUbicacionReal"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.home.MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Firstapp.ui.home.HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api_key" />
+
+        <receiver
+            android:name=".Firstapp.ui.utilities.widgets.PanicButtonWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/panic_button_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>
